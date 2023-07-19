@@ -1,3 +1,5 @@
-.buttons-uaqb-5 > .button-ejjZWC:first-child{
+/* Clear message input */
+[class*="buttons-"]>button[aria-haspopup="dialog"], /* nitro gift */
+[class*="buttons-"]>div[class*="expression-picker-chat-input-button"]:nth-child(2), /* gif */ {
   display: none;
 }
