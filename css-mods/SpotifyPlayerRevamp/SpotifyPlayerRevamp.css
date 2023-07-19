@@ -1,12 +1,21 @@
 :root {
   /* Change colors here (in HSL) */
-  --spotify-vencord-color: 214deg 74% 53%;
-  --spotify-vencord-dark: 214deg 74% 53%; /* choose darker tone (lower 3rd value) */
-  --spotify-vencord-text: 210deg 8% 86%;
+  --spotify-vencord-color: 228deg 7% 15%;
+  --spotify-vencord-dark: 228deg 7% 15%; /* choose darker tone (lower 3rd value) */
+  --spotify-vencord-text: 214deg 74% 53%;
   
   /* Spotify Vencord color theme */
   --spotify-vencord-wave-width: 240px;
 }
+
+@keyframes spotifywave {
+  0% {
+    -webkit-mask-position-x: var(--spotify-vencord-wave-width);
+  }
+  100% {
+    -webkit-mask-position-x: 0;
+  }
+  
 #vc-spotify-player::before {
   content: "";
   position: absolute;
@@ -71,3 +80,35 @@
   fill: hsla(var(--spotify-vencord-text)/1) !important;
   background-color: hsla(var(--spotify-vencord-text)/1) !important;
 }
+/* VC fix */
+body:has(.container-1zzFcN) #vc-spotify-player::before {
+    margin-top: -128px;
+  }
+  .container-1zzFcN {
+    margin-bottom: 0px;
+    background-color: hsla(var(--spotify-vencord-text)/1);
+  }
+  body:has(.vc-spotify-pause) .container-1zzFcN {
+    background-color: hsla(var(--spotify-vencord-color)/1);
+  }
+  #app-mount > div.appAsidePanelWrapper-ev4hlp > div.notAppAsidePanel-3yzkgB > div.app-3xd6d0 > div > div.layers-OrUESM.layers-1YQhyW > div > div > div.base-2jDfDU > div > div.sidebar-1tnWFu > section > div.wrapper-3Hk9OB > div > div.flex-2S1XBF.flex-3BkGQD.horizontal-112GEH.horizontal-1Piu5-.flex-3BkGQD.directionRow-2Iu2A9.justifyStart-2Mwniq.alignCenter-14kD11.noWrap-hBpHBz.connection-3k9QeF > div.flex-2S1XBF.flex-3BkGQD.horizontal-112GEH.horizontal-1Piu5-.flex-3BkGQD.directionRow-2Iu2A9.justifyStart-2Mwniq.alignStretch-Uwowzr.noWrap-hBpHBz > button > div > svg {
+    color: hsla(var(--spotify-vencord-color)/1);
+  }
+  body:has(.vc-spotify-pause) #app-mount > div.appAsidePanelWrapper-ev4hlp > div.notAppAsidePanel-3yzkgB > div.app-3xd6d0 > div > div.layers-OrUESM.layers-1YQhyW > div > div > div.base-2jDfDU > div > div.sidebar-1tnWFu > section > div.wrapper-3Hk9OB > div > div.flex-2S1XBF.flex-3BkGQD.horizontal-112GEH.horizontal-1Piu5-.flex-3BkGQD.directionRow-2Iu2A9.justifyStart-2Mwniq.alignCenter-14kD11.noWrap-hBpHBz.connection-3k9QeF > div.flex-2S1XBF.flex-3BkGQD.horizontal-112GEH.horizontal-1Piu5-.flex-3BkGQD.directionRow-2Iu2A9.justifyStart-2Mwniq.alignStretch-Uwowzr.noWrap-hBpHBz > button > div > svg {
+    color: hsla(var(--spotify-vencord-text)/1);
+  }
+  body:has(.vc-spotify-pause) .lookFilled-1H2Jvj.colorBrand-2M3O3N, .theme-dark .activeButton-2K2Fwx {
+    background-color: hsla(var(--spotify-vencord-text)/0.5);
+    color: hsla(var(--spotify-vencord-color)/1);
+  }
+  body:has(.vc-spotify-pause) .lookFilled-1H2Jvj.colorBrand-2M3O3N:hover, .theme-dark .activeButton-2K2Fwx:hover {
+    background-color: hsla(var(--spotify-vencord-text)/1);
+  }
+  .lookFilled-1H2Jvj.colorBrand-2M3O3N, .theme-dark .activeButton-2K2Fwx {
+    background-color: hsla(var(--spotify-vencord-color)/0.5);
+    color: hsla(var(--spotify-vencord-text)/1);
+  }
+  .lookFilled-1H2Jvj.colorBrand-2M3O3N:hover, .theme-dark .activeButton-2K2Fwx:hover {
+    background-color: hsla(var(--spotify-vencord-color)/1);
+  }
+  /* end of VC fix */
