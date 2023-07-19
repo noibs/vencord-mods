@@ -1,7 +1,3 @@
-/* Clear message input */
-[class*="attachButton-"], /* attach button */
-[class*="buttons-"]>button[aria-haspopup="dialog"], /* nitro gift */
-[class*="buttons-"]>div[class*="expression-picker-chat-input-button"]:nth-child(2), /* gif */
-[class*="buttons-"]>div[class*="expression-picker-chat-input-button"]:nth-child(3) /* sticker */ {
+.buttons-uaqb-5 > .button-ejjZWC:first-child{
   display: none;
 }
