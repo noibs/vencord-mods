@@ -1,0 +1,17 @@
+/* Hides gift button from chat box */
+button[aria-label="Send a gift"],
+/* Hides sticker button from chat box */
+button[aria-label="Open sticker picker"],
+/* Hide nitro & library tab in friends menu */
+.channel-1Shao0.container-32HW5s[aria-posinset="2"],
+.channel-1Shao0.container-32HW5s[aria-posinset="3"],
+/* Hides help icon on discord toolbar */
+div.toolbar-3_r2xA > a.anchor-1X4H4q,
+/* Hides notification settings button on discord toolbar*/
+div.toolbar-3_r2xA > div.iconWrapper-2awDjA[aria-label="Notification Settings"] {
+  display: none;
+}
+
+
+
+
