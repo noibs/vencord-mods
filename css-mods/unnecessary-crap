@@ -1,0 +1,25 @@
+/* Account profile popout clean up */
+[class*=accountProfilePopoutWrapper-] > div > div > [class*=userPopoutOverlayBackground-] > div:nth-child(1),
+[class*=accountProfilePopoutWrapper-] > div > div > [class*=userPopoutOverlayBackground-] > div:nth-child(2),
+[class*=accountProfilePopoutWrapper-] > div > div > [class*=userPopoutOverlayBackground-] > div:nth-child(3),
+[class*=accountProfilePopoutWrapper-] div[role=separator],
+[class*=accountProfilePopoutWrapper-] > div > div > div > div.divider-2dDziJ
+{
+  display: none;
+}
+
+/* Hide unnecessary sidebar buttons */
+li.channel_c21703[aria-posinset="2"], /* Library*/
+/*li.channel_c21703[aria-posinset="3"], /* Nitro*/
+/* Hides gift button from chat box */
+button[aria-label="Send a gift"],
+/* Hides sticker button from chat box */
+button[aria-label="Open sticker picker"],
+/* Hide nitro & library tab in friends menu */
+
+/* Hides help icon on discord toolbar */
+div.iconWrapper_af9215[aria-label="Help"],
+/* Hides notification settings button on discord toolbar*/
+div.iconWrapper_af9215[aria-label="Notification Settings"] {
+  display: none;
+}
